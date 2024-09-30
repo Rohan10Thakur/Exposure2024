@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            margin-top: 20px;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .tracker {
+            margin-top: 20px;
+        }
+        .tracker input {
+            margin: 5px 0;
+            padding: 10px;
+            width: calc(100% - 22px);
+        }
+        .tracker button {
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .tracker button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fitness Tracker</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Log Your Activity</h2>
+        <div class="tracker">
+            <input type="text" placeholder="Activity (e.g., Running)">
+            <input type="number" placeholder="Duration (minutes)">
+            <input type="number" placeholder="Calories Burned">
+            <button type="submit">Log Activity</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Your Activities</h2>
+        <ul>
+            <li>Running: 30 minutes, 300 calories</li>
+            <li>Cycling: 45 minutes, 400 calories</li>
+            <li>Yoga: 60 minutes, 200 calories</li>
+        </ul>
+    </section>
+</main>
+
+</body>
+</html>

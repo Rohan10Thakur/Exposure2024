@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .tracker {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fitness Tracker</h1>
+</header>
+
+<main>
+    <div class="tracker">
+        <h2>Log Your Workout</h2>
+        <form>
+            <label for="exercise">Exercise:</label><br>
+            <input type="text" id="exercise" name="exercise" required><br><br>
+            
+            <label for="duration">Duration (minutes):</label><br>
+            <input type="number" id="duration" name="duration" required><br><br>
+
+            <label for="calories">Calories Burned:</label><br>
+            <input type="number" id="calories" name="calories" required><br><br>
+
+            <input type="submit" value="Log Workout">
+        </form>
+    </div>
+
+    <div class="tracker">
+        <h2>Daily Summary</h2>
+        <p>No data to display. Log your workouts!</p>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Fitness Tracker</p>
+</footer>
+
+</body>
+</html>

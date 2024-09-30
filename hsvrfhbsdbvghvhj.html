@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"], input[type="number"], input[type="date"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .data-display {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fitness Tracker</h1>
+    <form id="fitnessForm">
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        
+        <label for="exercise">Exercise:</label>
+        <input type="text" id="exercise" placeholder="Type of exercise" required>
+        
+        <label for="duration">Duration (minutes):</label>
+        <input type="number" id="duration" required>
+        
+        <label for="calories">Calories Burned:</label>
+        <input type="number" id="calories" required>
+        
+        <input type="submit" value="Add Entry">
+    </form>
+
+    <div class="data-display" id="dataDisplay"></div>
+
+    <script>
+        const form = document.getElementById('fitnessForm');
+        const dataDisplay = document.getElementById('dataDisplay');
+        let entries = [];
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const date = document.getElementById('date').value;
+            const exercise = document.getElementById('exercise').value;
+            const duration = document.getElementById('duration').value;
+            const calories = document.getElementById('calories').value;
+
+            const entry = { date, exercise, duration, calories };
+            entries.push(entry);
+            displayEntries();
+            form.reset();
+        });
+
+        function displayEntries() {
+            dataDisplay.innerHTML = '<h2>Entries</h2>';
+            entries.forEach(entry => {
+                dataDisplay.innerHTML += `
+                    <div>
+                        <strong>Date:</strong> ${entry.date} <br>
+                        <strong>Exercise:</strong> ${entry.exercise} <br>
+                        <strong>Duration:</strong> ${entry.duration} minutes <br>
+                        <strong>Calories Burned:</strong> ${entry.calories} kcal <br>
+                        <hr>
+                    </div>
+                `;
+            });
+        }
+    </script>
+
+</body>
+</html>

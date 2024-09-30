@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Fitness Health Tracker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .form-section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 22px);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Health Tracker</h1>
+        <nav>
+            <a href="index.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration Successful!');
+            this.reset();
+        });
+    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Fitness Health Tracker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .form-section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 22px);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Health Tracker</h1>
+        <nav>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add authentication logic here
+            window.location.href = 'workout.html';
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Fitness Health Tracker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .form-section {
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 22px);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Health Tracker</h1>
+        <nav>
+            <a href="index.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration Successful!');
+            this.reset();
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .tracker {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #4CAF50;
+            color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fitness Tracker</h1>
+</header>
+
+<main>
+    <div class="tracker">
+        <h2>Log Your Workout</h2>
+        <form id="workoutForm">
+            <label for="exercise">Exercise:</label><br>
+            <input type="text" id="exercise" name="exercise" required><br><br>
+            
+            <label for="duration">Duration (minutes):</label><br>
+            <input type="number" id="duration" name="duration" required><br><br>
+
+            <label for="calories">Calories Burned:</label><br>
+            <input type="number" id="calories" name="calories" required><br><br>
+
+            <input type="submit" value="Log Workout">
+        </form>
+    </div>
+
+    <div class="tracker">
+        <h2>Daily Summary</h2>
+        <table id="summaryTable">
+            <tr>
+                <th>Exercise</th>
+                <th>Duration (min)</th>
+                <th>Calories</th>
+            </tr>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Fitness Tracker</p>
+</footer>
+
+<script>
+    const workoutForm = document.getElementById('workoutForm');
+    const summaryTable = document.getElementById('summaryTable');
+
+    // Load existing workouts from localStorage
+    document.addEventListener('DOMContentLoaded', loadWorkouts);
+
+    workoutForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const exercise = document.getElementById('exercise').value;
+        const duration = document.getElementById('duration').value;
+        const calories = document.getElementById('calories').value;
+
+        const workout = { exercise, duration, calories };
+        saveWorkout(workout);
+        displayWorkout(workout);
+        workoutForm.reset();
+    });
+
+    function saveWorkout(workout) {
+        let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
+        workouts.push(workout);
+        localStorage.setItem('workouts', JSON.stringify(workouts));
+    }
+
+    function loadWorkouts() {
+        let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
+        workouts.forEach(workout => displayWorkout(workout));
+    }
+
+    function displayWorkout(workout) {
+        const row = summaryTable.insertRow();
+        row.insertCell(0).innerText = workout.exercise;
+        row.insertCell(1).innerText = workout.duration;
+        row.insertCell(2).innerText = workout.calories;
+    }
+</script>
+
+</body>
+</html>

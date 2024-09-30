@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Fitness Health Tracker</title>
+    <style>
+<main>
+    <div class="tracker">
+        <h2>Log Your Workout</h2>
+        <form id="workoutForm">
+            <label for="exercise">Exercise:</label><br>
+            <input type="text" id="exercise" name="exercise" required><br><br>
+            
+            <label for="duration">Duration (minutes):</label><br>
+            <input type="number" id="duration" name="duration" required><br><br>
+
+            <label for="calories">Calories Burned:</label><br>
+            <input type="number" id="calories" name="calories" required><br><br>
+
+            <input type="submit" value="Log Workout">
+        </form>
+    </div>
+
+    <div class="tracker">
+        <h2>Daily Summary</h2>
+        <table id="summaryTable">
+            <tr>
+                <th>Exercise</th>
+                <th>Duration (min)</th>
+                <th>Calories</th>
+            </tr>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Fitness Tracker</p>
+</footer>
+
+<script>
+    const workoutForm = document.getElementById('workoutForm');
+    const summaryTable = document.getElementById('summaryTable');
+
+    // Load existing workouts from localStorage
+    document.addEventListener('DOMContentLoaded', loadWorkouts);
+
+    workoutForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const exercise = document.getElementById('exercise').value;
+        const duration = document.getElementById('duration').value;
+        const calories = document.getElementById('calories').value;
+
+        const workout = { exercise, duration, calories };
+        saveWorkout(workout);
+        displayWorkout(workout);
+        workoutForm.reset();
+    });
+
+    function saveWorkout(workout) {
+        let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
+        workouts.push(workout);
+        localStorage.setItem('workouts', JSON.stringify(workouts));
+    }
+
+    function loadWorkouts() {
+        let workouts = JSON.parse(localStorage.getItem('workouts')) || [];
+        workouts.forEach(workout => displayWorkout(workout));
+    }
+
+    function displayWorkout(workout) {
+        const row = summaryTable.insertRow();
+        row.insertCell(0).innerText = workout.exercise;
+        row.insertCell(1).innerText = workout.duration;
+        row.insertCell(2).innerText = workout.calories;
+    }
+</script>
+
+</body>
+</html>
